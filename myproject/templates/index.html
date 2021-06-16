@@ -1,0 +1,250 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+    <blockquote class="blockquote">
+    <form method="POST" enctype="multipart/form-data" >
+    {% csrf_token %}
+    <input type="file" name="document" required>
+    <br>
+    <label for="color"><p class="bg-primary"></p></label>
+    <p class="bg-success">choose a text color</p>
+    <select name="color" id="color" class="form-control">
+        <option value="black">black</option>
+        <option value="white">white</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+        <option value="yellow">yellow</option>
+        <option value="cyan">cyan</option>
+        <option value="magenta">magenta</option>
+        <option value="silver">silver</option>
+        <option value="maron">maron</option>
+        <option value="olive">olive</option>
+        <option value="lime">lime</option>
+        <option value="purple">purple</option>
+        <option value="teal">teal</option>
+        <option value="navy">navy</option>
+        <option value="maroon">maroon</option>
+        <option value="darked">darked</option>
+        <option value="brown">brown</option>
+        <option value="firebrick">firebrick</option>
+        <option value="crimson">crimson</option>
+        <option value="red">red</option>
+        <option value="tomato">tomato</option>
+        <option value="coral">coral</option>
+        <option value="indianred">indianred</option>
+        <option value="lightcoral">lightcoral</option>
+        <option value="darksalmon">darksalmon</option>
+        <option value="orangered">orangered</option>
+        <option value="orange">orange</option>
+        <option value="gold">gold</option>
+        <option value="khaki">khaki</option>
+        <option value="darkgreen">darkgreen</option>
+        <option value="forestgreen">forestgreen</option>
+        <option value="lightgreen">lightgreen</option>
+        <option value="seagreen">seagreen</option>
+        <option value="darkslategray">darkslategray</option>
+        <option value="teal">teal</option>
+        <option value="turquiose">turquiose</option>
+        <option value="aquamarine">aquamarine</option>
+        <option value="cadetblue">cadetblue</option>
+        <option value="steelblue">steelblue</option>
+        <option value="deepskyblue">deepskyblue</option>
+        <option value="dodgerblue">dodgerblue</option>
+        <option value="lightblue">lightblue</option>
+        <option value="skyblue">skyblue</option>
+        <option value="midnightblue">midnightblue</option>
+        <option value="darkblue">darkblue</option>
+        <option value="blue">blue</option>
+        <option value="blueviolet">blueviolet</option>
+        <option value="indigo">indigo</option>
+        <option value="slateblue">slateblue</option>
+        <option value="darkvoilet">darkvoilet</option>
+        <option value="darkorchid">darkorchid</option>
+        <option value="purple">purple</option>
+        <option value="thistle">thistle</option>
+        <option value="plum">plum</option>
+        <option value="violet">violet</option>
+        <option value="orchid">orchid</option>
+        <option value="deeppink">deeppink</option>
+        <option value="hotpink">hotpink</option>
+        <option value="antiquewhite">antiquewhite</option>
+        <option value="beige">beige</option>
+        <option value="bisque">bisque</option>
+        <option value="wheat">wheat</option>
+        <option value="cornsilk">cornsilk</option>
+        <option value="lightyelllow">lightyellow</option>
+        <option value="saddlebrown">saddlebrown</option>
+        <option value="sienna">sienna</option>
+        <option value="chocolate">chocolate</option>
+        <option value="peru">peru</option>
+        <option value="sandybrown">sandybrown</option>
+        <option value="burlywood">burlywood</option>
+        <option value="tan">tan</option>
+        <option value="rosybrown">rosybrown</option>
+        <option value="mocassin">mocassin</option>
+        <option value="navajowhite">navajowhite</option>
+        <option value="peachpuff">peachpuff</option>
+        <option value="mistyrose">mistyrose</option>
+        <option value="linen">linen</option>
+        <option value="papayawhip">papayawhip</option>
+        <option value="mintcream">mintcream</option>
+        <option value="slategray">slategray</option>
+        <option value="lightsteelblue">lightsteelblue</option>
+        <option value="lavender">lavender</option>
+        <option value="floralwhite">floralwhite</option>
+        <option value="aliceblue">aliceblue</option>
+        <option value="ghostwhite">ghostwhite</option>
+        <option value="honeydew">honeydew</option>
+        <option value="ivory">ivory</option>
+        <option value="azure">azure</option>
+        <option value="snow">snow</option>
+        <option value="black">black</option>
+        <option value="gainsboro">gainsboro</option>
+        <option value="whitesmoke">whitesmoke</option>
+    </select>
+    <br>
+    <label for="bgcolor"><p class="bg-primary"></p></label>
+    <p class="bg-primary">choose a backgroundcolor</p>
+    
+    <select name="bgcolor" id="bgcolor" class="form-control">
+        <option value="white">white</option>
+        <option value="black">black</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+        <option value="yellow">yellow</option>
+        <option value="cyan">cyan</option>
+        <option value="magenta">magenta</option>
+        <option value="silver">silver</option>
+        <option value="maron">maron</option>
+        <option value="olive">olive</option>
+        <option value="lime">lime</option>
+        <option value="purple">purple</option>
+        <option value="teal">teal</option>
+        <option value="navy">navy</option>
+        <option value="maroon">maroon</option>
+        <option value="darked">darked</option>
+        <option value="brown">brown</option>
+        <option value="firebrick">firebrick</option>
+        <option value="crimson">crimson</option>
+        <option value="red">red</option>
+        <option value="tomato">tomato</option>
+        <option value="coral">coral</option>
+        <option value="indianred">indianred</option>
+        <option value="lightcoral">lightcoral</option>
+        <option value="darksalmon">darksalmon</option>
+        <option value="orangered">orangered</option>
+        <option value="orange">orange</option>
+        <option value="gold">gold</option>
+        <option value="khaki">khaki</option>
+        <option value="darkgreen">darkgreen</option>
+        <option value="forestgreen">forestgreen</option>
+        <option value="lightgreen">lightgreen</option>
+        <option value="seagreen">seagreen</option>
+        <option value="darkslategray">darkslategray</option>
+        <option value="teal">teal</option>
+        <option value="turquiose">turquiose</option>
+        <option value="aquamarine">aquamarine</option>
+        <option value="cadetblue">cadetblue</option>
+        <option value="steelblue">steelblue</option>
+        <option value="deepskyblue">deepskyblue</option>
+        <option value="dodgerblue">dodgerblue</option>
+        <option value="lightblue">lightblue</option>
+        <option value="skyblue">skyblue</option>
+        <option value="midnightblue">midnightblue</option>
+        <option value="darkblue">darkblue</option>
+        <option value="blue">blue</option>
+        <option value="blueviolet">blueviolet</option>
+        <option value="indigo">indigo</option>
+        <option value="slateblue">slateblue</option>
+        <option value="darkvoilet">darkvoilet</option>
+        <option value="darkorchid">darkorchid</option>
+        <option value="purple">purple</option>
+        <option value="thistle">thistle</option>
+        <option value="plum">plum</option>
+        <option value="violet">violet</option>
+        <option value="orchid">orchid</option>
+        <option value="deeppink">deeppink</option>
+        <option value="hotpink">hotpink</option>
+        <option value="antiquewhite">antiquewhite</option>
+        <option value="beige">beige</option>
+        <option value="bisque">bisque</option>
+        <option value="wheat">wheat</option>
+        <option value="cornsilk">cornsilk</option>
+        <option value="lightyelllow">lightyellow</option>
+        <option value="saddlebrown">saddlebrown</option>
+        <option value="sienna">sienna</option>
+        <option value="chocolate">chocolate</option>
+        <option value="peru">peru</option>
+        <option value="sandybrown">sandybrown</option>
+        <option value="burlywood">burlywood</option>
+        <option value="tan">tan</option>
+        <option value="rosybrown">rosybrown</option>
+        <option value="mocassin">mocassin</option>
+        <option value="navajowhite">navajowhite</option>
+        <option value="peachpuff">peachpuff</option>
+        <option value="mistyrose">mistyrose</option>
+        <option value="linen">linen</option>
+        <option value="papayawhip">papayawhip</option>
+        <option value="mintcream">mintcream</option>
+        <option value="slategray">slategray</option>
+        <option value="lightsteelblue">lightsteelblue</option>
+        <option value="lavender">lavender</option>
+        <option value="floralwhite">floralwhite</option>
+        <option value="aliceblue">aliceblue</option>
+        <option value="ghostwhite">ghostwhite</option>
+        <option value="honeydew">honeydew</option>
+        <option value="ivory">ivory</option>
+        <option value="azure">azure</option>
+        <option value="snow">snow</option>
+        <option value="black">black</option>
+        <option value="gainsboro">gainsboro</option>
+        <option value="whitesmoke">whitesmoke</option>
+    </select>
+    <br>
+    <label for="fontstyle" ><p class="bg-primary"></p></label>
+    <p class="bg-success">choose a fontstyle</p>
+    <select name="fontstyle" id="fontstyle" class="form-control">
+        <option value="Allura-Regular.ttf">Allura-Regular</option>
+        <option value="AmaticSC-Bold.ttf">AmaticsSC-Bold</option>
+        <option value="AmaticSC-Regular.ttf">AmaticSC-Regular</option>
+        <option value="ArchitectsDaughter-Regular.ttf">ArchitectsDaughter-Regular</option>
+        <option value="Caveat-VariableFont_wght.ttf">Caveat-VariableFont_wght</option>
+        <option value="DancingScript-VariableFont_wght.ttf">DancingScript-VariableFont_wght</option>
+        <option value="GlorialHallelujah-Regular.ttf">GlorialHallelujah-Regular</option>
+        <option value="GreatVibes-Regular.ttf">GreatVibes-Regular</option>
+        <option value="HomemdeApple-Regular.ttf">HomemdeApple-Regular</option>
+        <option value="IndieFlower-Regular.ttf">IndieFlower-Regular</option>
+        <option value="KaushanScript-Regular.ttf">KaushanScript-Regular</option>
+        <option value="Lobster-Regular.ttf">Lobster-Regular</option>
+        <option value="LuckiestGuy-Regular.ttf">LuckiestGuy-Regular</option>
+        <option value="MarckScript-Regular.ttf">MarckScript-Regular</option>
+        <option value="Monoton-Regular.ttf">Monoton-Regular</option>
+        <option value="Orbitron-VariableFont_wght.ttf">Orbitron-VariableFont_wght</option>
+        <option value="Pacifico-Regular.ttf">Pacifico-Regular</option>
+        <option value="PermanentMarker-Regular.ttf">PermanentMarker-Regular</option>
+        <option value="Righteous-Regular.ttf">Righteous-Regular</option>
+        <option value="Rocksalt-Regular.ttf">Rocksalt-Regular</option>
+        <option value="Sacramento-Regular.ttf">Sacramento-Regular</option>
+        <option value="SeymourOne-Regular.ttf">SeymourOne-Regular</option>
+        <option value="ShadowIntoLight-Regular.ttf">ShadowIntoLight-Regular</option>
+        <option value="Tangerine-Bold.ttf">Tangerine-Bold</option>
+        <option value="Tangerine-Regular">Tangerine-Regular</option>
+        <option value="Yellowtail-Regular.ttf">Yellowtail-Regular</option>
+        <option value="ZCOOLKuaile-Regular.ttf">ZCOOLKuaile-Regular</option>
+    </select>
+    <br>
+    <label for="fontsize"><p class="bg-primary"></p></label>
+    <p class="bg-primary">choose a font size</p>
+    <input defaultValue=16 class="form-control" type="number" id = "fontsize" name="fontsize" min="1" max="50">
+    <p></p>
+    <button type="submit" class="btn btn-warning">upload</button>
+    </form>
+    <p></p>
+    {% if url %}
+    <a  href="{{url}}" download="{{url}}"><button class="btn btn-success"> download</button></a>
+    {% endif %}
+    </blockquote>
+    </div>
+{% endblock %}
